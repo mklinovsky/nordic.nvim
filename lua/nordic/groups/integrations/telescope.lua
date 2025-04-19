@@ -30,19 +30,19 @@ function M.get()
     -- Flat.
     if O.telescope.style == 'flat' then
         G.TelescopeNormal = { bg = C.bg_float }
-        G.TelescopePromptNormal = { bg = C.black2 }
+        G.TelescopePromptNormal = { bg = C.bg_float }
         G.TelescopeResultsNormal = { bg = C.bg_float }
         G.TelescopePreviewNormal = { bg = C.bg_float }
         G.TelescopeSelection = { bg = C.bg_visual, fg = C.yellow.bright }
         G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
-        G.TelescopePreviewTitle = { bg = C.blue2, fg = C.black0, bold = true }
-        G.TelescopeResultsTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-        G.TelescopePromptTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-        G.TelescopeTitle = { bg = C.orange.base, fg = C.black0, bold = true }
-        G.TelescopeBorder = { fg = C.black0, bg = C.black0 }
-        G.TelescopePromptBorder = { bg = C.black2, fg = C.black0 }
-        G.TelescopeResultsBorder = { bg = C.bg_float, fg = C.black0 }
-        G.TelescopePreviewBorder = { bg = C.bg_float, fg = C.black0 }
+        G.TelescopePreviewTitle = { bg = C.cyan.base, fg = C.black0, bold = true }
+        G.TelescopeResultsTitle = { bg = C.cyan.base, fg = C.black0, bold = true }
+        G.TelescopePromptTitle = { bg = C.cyan.base, fg = C.black0, bold = true }
+        G.TelescopeTitle = { bg = C.cyan.base, fg = C.black0, bold = true }
+        G.TelescopeBorder = { fg = C.white0, bg = C.black0 }
+        G.TelescopePromptBorder = { bg = C.bg_float, fg = C.white0 }
+        G.TelescopeResultsBorder = { bg = C.bg_float, fg = C.white0 }
+        G.TelescopePreviewBorder = { bg = C.bg_float, fg = C.white0 }
         G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg_float, bold = true }
         G.TelescopeMultiSelection = { bg = C.bg_float }
         G.TelescopePromptPrefix = { bg = C.black2, fg = C.orange.bright }

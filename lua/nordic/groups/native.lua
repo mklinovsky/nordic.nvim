@@ -134,7 +134,7 @@ function M.get_groups()
     G.TreeFloatBorder = { link = 'FloatBorder' }
     G.TreeCursorLine = { bg = C.bg_selected }
     G.TreeCursor = { bg = C.none, fg = C.none }
-    G.TreeFolderIcon = { fg = C.yellow.dim }
+    G.TreeFolderIcon = { fg = C.blue1 }
     G.TreeIndentMarker = { fg = C.gray4 }
     G.TreeSymlink = { fg = C.blue2 }
     G.TreeFolderName = { fg = C.blue1 }
@@ -147,7 +147,7 @@ function M.get_groups()
     G.lCursor = { fg = C.black0 } -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     G.CursorIM = { fg = C.black0 } -- like Cursor, but used when in IME mode |CursorIM|
     G.CursorColumn = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    G.CursorLine = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    G.CursorLine = { bg = C.cursorline, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     G.CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     G.CursorLineSign = {}
     G.Directory = { fg = C.blue1 } -- directory names (and other special names in listings)
@@ -181,8 +181,8 @@ function M.get_groups()
     G.PmenuThumb = { bg = C.gray2, fg = C.gray2 } -- Popup menu: Thumb of the scrollbar.
     G.Question = { fg = C.info } -- |hit-enter| prompt and yes/no questions
     G.QuickFixLine = { bg = C.bg_visual, bold = true } -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    G.Search = { bg = C.bg_visual, fg = C.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    G.IncSearch = { bg = C.yellow.base, fg = C.bg_visual, bold = true } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    G.Search = { bg = C.blue2, fg = C.black0, bold = false, underline = false } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    G.IncSearch = { bg = C.red.base, fg = C.white3, bold = false } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     G.CurSearch = { link = 'IncSearch' }
     G.SpecialKey = { fg = C.gray5 } -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     G.SpellBad = { sp = C.error, undercurl = true } -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.

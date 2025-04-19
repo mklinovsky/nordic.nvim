@@ -36,14 +36,16 @@ function C.build_palette()
     C.bg_fold = C.gray2
 
     -- Cursorline Background
-    if options.cursorline.theme == 'light' then
-        options.cursorline.bg = C.gray2
-    else
-        options.cursorline.bg = C.black0
-    end
+    -- if options.cursorline.theme == 'light' then
+    --     options.cursorline.bg = C.gray2
+    -- else
+    --     options.cursorline.bg = C.gray1
+    -- end
+    C.cursorline = C.gray1
 
-    C.bg_visual = (options.transparent.bg and options.cursorline.bg)
-        or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+    -- C.bg_visual = (options.transparent.bg and options.cursorline.bg)
+    --     or U.blend(options.cursorline.bg, C.bg, options.cursorline.blend)
+    C.bg_visual = C.gray3
 
     -- Borders
     C.border_fg = (options.bright_border and C.white0) or C.black0
@@ -58,10 +60,10 @@ function C.build_palette()
     C.fg_selected = C.fg_bright
 
     -- Floating windows
-    C.bg_float = (options.transparent.float and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
+    C.bg_float = (options.transparent.float and C.none) or ((options.swap_backgrounds and C.gray0) or C.bg)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
-    C.fg_float_border = C.border_fg
+    C.fg_float_border = C.white0
 
     -- Popups
     C.bg_popup = C.bg_float
@@ -83,7 +85,7 @@ function C.build_palette()
     C.git = {
         add = C.green.base,
         delete = C.red.base,
-        change = C.blue1,
+        change = C.magenta.base,
     }
 
     -- Diagnostics
