@@ -97,6 +97,7 @@ function C.build_palette()
 
     -- Misc
     C.comment = C.gray4
+    C.fg_gutter = C.gray2
 
     -- Modify the palette after generating colors.
     options.after_palette(C)
